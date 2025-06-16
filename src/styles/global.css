@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "ComicNeue";
+  src: url("/src/assets/fonts/comicneue-regular-webfont.woff2") format("woff2"),
+    url("/src/assets/fonts/comicneue-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ComicNeue";
+  src: url("/src/assets/fonts/comicneue-bold-webfont.woff2") format("woff2"),
+    url("/src/assets/fonts/comicneue-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-comic_neue: "ComicNeue", sans-serif;
+
+  --color-rosa-moderdonia: #f9138e;
+  --color-cutre-white: #f9f9f9;
+  --color-cutre-black: #0f0f0f;
+}
+
+@layer base {
+  html {
+    @apply bg-rosa-moderdonia antialiased scroll-smooth font-comic_neue;
+  }
+  body {
+    @apply bg-cutre-white antialiased scroll-smooth font-comic_neue;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-wider font-bold;
+  }
+  h1 {
+    @apply text-3xl;
+  }
+}
+
+@layer components {
+  .btn-season {
+    @apply text-sm bg-cutre-black px-1 sm:px-2 py-0.5 sm:py-1 text-cutre-white border-2 border-cutre-black font-bold cursor-pointer  hover:text-cutre-black hover:bg-cutre-white hover:transition-colors duration-300;
+  }
+  .btn-all-season {
+    @apply text-sm bg-cutre-white px-1 sm:px-2 py-0.5 sm:py-1 text-cutre-black border-2 border-cutre-black font-bold cursor-pointer hover:bg-cutre-black hover:text-cutre-white hover:transition-colors duration-300;
+  }
+  .footer {
+    @apply w-full bg-cutre-black p-2 text-cutre-white rounded-tl-md rounded-tr-md;
+  }
+}
