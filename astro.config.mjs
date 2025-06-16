@@ -3,9 +3,14 @@ import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
-export default defineConfig({
+export default defineConfig( {
+  site: "https://lavidamodernaes.com",
   vite: {
-    plugins: [tailwindcss()]
-  }
-});
+    plugins: [ tailwindcss() ]
+  },
+  integrations: [ sitemap() ],
+  output: "static",
+} );
