@@ -1,16 +1,22 @@
 ---
-
+import Layout from "src/layout/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <section
+    class="bg-rosa-moderdonia px-2 py-10 border-b-4 border-cutre-black mx-auto flex flex-col items-center justify-center text-balance"
+  >
+    <h1 class="text-center text-cutre-white mb-4 text-4xl">Gora Moderdona!</h1>
+    <p class="text-lg text-center font-semibold">
+      Esto es un homenaje a todas esas frases de <span
+        class="underline decoration-wavy font-bold tracking-wider"
+        >#LaVidaModerna es...</span
+      > y al programa que tanto nos divirtió y que tantos ofendiditos creó.
+    </p>
+    <span
+      class="text-lg mt-8 text-cutre-black bg-cutre-white px-2 py-1 border-4 border-cutre-black transform rotate-12 font-bold"
+    >
+      Keep it Cutre ✨
+    </span>
+  </section>
+</Layout>
