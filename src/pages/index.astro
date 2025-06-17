@@ -1,4 +1,5 @@
 ---
+import Card from "@UI/Card.astro";
 import Layout from "src/layout/Layout.astro";
 ---
 
@@ -10,7 +11,7 @@ import Layout from "src/layout/Layout.astro";
     <p class="text-lg text-center font-semibold">
       Esto es un homenaje a todas esas frases de <span
         class="underline decoration-wavy font-bold tracking-wider"
-        >#LaVidaModerna es...</span
+        >#LaVidaModerna es</span
       > y al programa que tanto nos divirtió y que tantos ofendiditos creó.
     </p>
     <span
@@ -18,5 +19,22 @@ import Layout from "src/layout/Layout.astro";
     >
       Keep it Cutre ✨
     </span>
+  </section>
+  <section
+    class="grid py-6 sm:py-12 grid-cols-1 px-4 mx-auto sm:max-w-none sm:grid-cols-2 gap-6 overflow-y-hidden"
+  >
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+  </section>
+
+  <section class="py-8 text-center flex items-center justify-center">
+    <h2
+      class="px-2 py-1 border-4 border-cutre-blackb bg-rosa-moderdonia text-lg"
+    >
+      No hay más frases <span class="text-xs">(por ahora) </span>
+    </h2>
   </section>
 </Layout>

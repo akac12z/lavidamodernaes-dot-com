@@ -11,9 +11,9 @@ import Header from "@UI/Header.astro";
   <BaseHead>
     <slot name="head" />
   </BaseHead>
-  <body class="mx-auto max-w-3xl min-h-screen flex flex-col">
+  <body class="mx-auto max-w-3xl grid grid-cols-1">
     <Header />
-    <main class="h-screen overflow-x-hidden">
+    <main class="overflow-x-hidden min-h-screen">
       <slot />
     </main>
     <Footer />
