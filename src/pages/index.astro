@@ -1,44 +1,24 @@
 ---
+import Layout from "@layout/Layout.astro";
+import Main from "@UI/Main.astro";
+
 import Card from "@UI/Card.astro";
 import Card2 from "@UI/Card2.astro";
-import Layout from "src/layout/Layout.astro";
 ---
 
 <Layout>
-  <section
-    class="bg-rosa-moderdonia px-2 py-10 border-b-4 border-cutre-black mx-auto flex flex-col items-center justify-center text-balance"
-  >
-    <h1 class="text-center text-cutre-white mb-4 text-4xl">¡Gora Moderdona!</h1>
-    <p class="text-lg text-center font-semibold">
-      Esto es un homenaje a todas esas frases de <span
-        class="underline decoration-wavy font-bold tracking-wider"
-        >#LaVidaModerna es</span
-      > y al programa que tanto nos divirtió y que tantos ofendiditos creó.
-    </p>
-    <span
-      class="text-lg mt-8 text-cutre-black bg-cutre-white px-2 py-1 border-4 border-cutre-black transform rotate-12 font-bold"
+  <Main>
+    <section
+      class="mx-auto py-6 px-4 xs:px-16 sm:px-4 grid grid-cols-1 grid-rows-auto sm:grid-cols-2 gap-6 overflow-y-hidden"
     >
-      Keep it Cutre ✨
-    </span>
-  </section>
-  <section
-    class="mx-auto py-6 sm:py-12 px-4 xs:px-16 sm:px-4 grid grid-cols-1 grid-rows-auto sm:grid-cols-2 gap-6 overflow-y-hidden"
-  >
-    <Card />
-    <Card2 />
-    <Card />
-    <Card />
-    <Card2 />
-    <Card />
-    <Card />
-    <Card />
-  </section>
-
-  <section class="py-8 text-center flex items-center justify-center">
-    <h2
-      class="px-2 py-1 border-4 border-cutre-blackb bg-rosa-moderdonia text-lg"
-    >
-      No hay más frases <span class="text-xs">(por ahora) </span>
-    </h2>
-  </section>
+      <Card />
+      <Card2 />
+      <Card />
+      <Card />
+      <Card2 />
+      <Card />
+      <Card />
+      <Card2 />
+    </section>
+  </Main>
 </Layout>
