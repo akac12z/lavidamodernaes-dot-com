@@ -52,7 +52,13 @@
   .btn-all-season {
     @apply text-sm bg-cutre-white px-1 sm:px-2 py-0.5 sm:py-1 text-cutre-black border-2 border-cutre-black font-bold cursor-pointer hover:bg-cutre-black hover:text-cutre-white hover:transition-colors duration-300;
   }
+  .see-on-twitter {
+    @apply bg-cutre-black text-cutre-white px-2 py-1 text-xs sm:text-sm font-bold border-2 border-cutre-black hover:bg-rosa-moderdonia hover:border-rosa-moderdonia transition-colors duration-200 flex items-center gap-1;
+  }
+  .share-btn {
+    @apply bg-cutre-black text-cutre-white px-2 py-1 border-2 border-cutre-black hover:bg-transparent hover:border-rosa-moderdonia hover:text-rosa-moderdonia transition-colors duration-200;
+  }
   .footer {
-    @apply w-full bg-cutre-black p-2 text-cutre-white rounded-tl-md rounded-tr-md;
+    @apply w-full bg-cutre-black p-2 text-cutre-white rounded-tl-md rounded-tr-md flex justify-between items-center;
   }
 }

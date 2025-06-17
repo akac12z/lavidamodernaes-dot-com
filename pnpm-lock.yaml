@@ -6,16 +6,19 @@ settings:
 
 dependencies:
   '@astrojs/sitemap':
-    specifier: ^3.4.1
+    specifier: 3.4.1
     version: 3.4.1
+  '@lucide/astro':
+    specifier: ^0.516.0
+    version: 0.516.0(astro@5.9.3)
   '@tailwindcss/vite':
-    specifier: ^4.1.10
+    specifier: 4.1.10
     version: 4.1.10(vite@6.3.5)
   astro:
-    specifier: ^5.9.3
+    specifier: 5.9.3
     version: 5.9.3(typescript@5.8.3)
   tailwindcss:
-    specifier: ^4.1.10
+    specifier: 4.1.10
     version: 4.1.10
 
 packages:
@@ -578,6 +581,14 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+    dev: false
+
+  /@lucide/astro@0.516.0(astro@5.9.3):
+    resolution: {integrity: sha512-MerAf+eR/EP+MSGXMrShWXxsYzP2vu2SeWLRxL1HgZYsu/Si3QdtBycnE8FKXz4U5J4aj1JICjBXFOYYS1Hs7g==}
+    peerDependencies:
+      astro: ^4 || ^5
+    dependencies:
+      astro: 5.9.3(typescript@5.8.3)
     dev: false
 
   /@oslojs/encoding@1.1.0:
