@@ -1,0 +1,50 @@
+---
+import { SquareArrowOutUpRight } from "@lucide/astro";
+import Instagram from "./icons/Instagram.astro";
+import Twitter from "./icons/Twitter.astro";
+
+// PONER AL LINK target="_blank" rel="noopener noreferrer"
+---
+
+<article
+  class="bg-cutre-white border-4 border-cutre-black p-4 shadow-lg transition-transform duration-500 -rotate-3 hover:rotate-0 text-pretty h-fit"
+>
+  <section class="flex justify-between items-center mb-3 sm:mb-4">
+    <p class="font-bold">
+      Por
+      <span class="underline underline-offset-2 decoration-wavy tracking-wider"
+        >@{"telastrujo"}</span
+      >
+    </p>
+    <a href="#" class="see-on-yt" title="Ver en YouTube">
+      Ver E{25}T{2}{" "}
+      <SquareArrowOutUpRight width={10} />
+    </a>
+  </section>
+  <section class="my-4 sm:my-6">
+    <h3 class="text-lg sm:text-xl font-bold text-cutre-black">
+      #LaVidaModerna es
+    </h3>
+    <h3 class="text-sm sm:text-lg font-bold text-rosa-moderdonia">
+      hacer match con tu hija en Tinder.
+    </h3>
+  </section>
+  <section class="flex justify-between items-end">
+    {/* Botones de compartir en la esquina inferior izquierda */}
+    <section class="flex flex-col justify-center items-center">
+      <span class="text-sm font-bold">Compártela</span>
+      <section class="flex gap-2">
+        <a href="#" class="share-btn" title="Compartir en Twitter">
+          <Twitter classes="w-4" />
+        </a>
+        <a href="#" class="share-btn" title="Compartir en Instagram">
+          <Instagram classes="w-4" />
+        </a>
+      </section>
+    </section>
+    <a href="#" class="see-on-twitter" title="Ver en X/Twwitter">
+      Ver en Twitter
+      <SquareArrowOutUpRight width={10} />
+    </a>
+  </section>
+</article>
