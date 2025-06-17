@@ -11,6 +11,9 @@
       "@UI/*": [
         "./src/components/UI/*"
       ],
+      "@layout/*": [
+        "./src/layout/*"
+      ],
     }
   }
 }
