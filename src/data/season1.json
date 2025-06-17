@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "tweet_url": "https://x.com/vidamoderna",
+    "quote": "un niño que antes de dar su primer beso, ya ha matado a 40 prostitutas en el GTA.",
+    "season": 1,
+    "episode": 1,
+    "source": "https://www.youtube.com/watch?v=ss9Tqke64Qs&t=2859s"
+  },
+  {
+    "id": 2,
+    "tweet_url": "https://x.com/vidamoderna",
+    "quote": "pagar por PayPal tu cuota de la Virgen de los Remedios.",
+    "season": 1,
+    "episode": 1,
+    "source": "https://www.youtube.com/watch?v=ss9Tqke64Qs&t=2859s"
+  },
+  {
+    "id": 3,
+    "tweet_url": "https://x.com/vidamoderna",
+    "quote": "afeitar hombros y enmoquetar cabezas.",
+    "season": 1,
+    "episode": 1,
+    "source": "https://www.youtube.com/watch?v=ss9Tqke64Qs&t=2859s"
+  },
+  {
+    "id": 4,
+    "tweet_url": "https://x.com/vidamoderna",
+    "quote": "ir al trabajo en bici y algimnasio en todoterreno.",
+    "season": 1,
+    "episode": 2,
+    "source": "https://www.youtube.com/watch?v=SdNY-oTDVPI&t=1791s"
+  },
+  {
+    "id": 5,
+    "tweet_url": "https://x.com/vidamoderna",
+    "quote": "dudar si el preservativo usado va al cubo de plástico o al cubo de orgánico.",
+    "season": 1,
+    "episode": 2,
+    "source": "https://www.youtube.com/watch?v=SdNY-oTDVPI&t=1791s"
+  },
+  {
+    "id": 6,
+    "tweet_url": "https://x.com/vidamoderna",
+    "quote": "leer la bibla en pdf y el coran en eBook.",
+    "season": 1,
+    "episode": 2,
+    "source": "https://www.youtube.com/watch?v=SdNY-oTDVPI&t=1791s"
+  }
+
+]

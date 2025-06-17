@@ -11,13 +11,14 @@ const tweetsCollection = defineCollection({
       .refine(
         (url) =>
           url.startsWith("https://x.com/") ||
-          url.startsWith("https://twitter.com/"),
+          url.startsWith("https://twitter.com/") ||
+          url.startsWith("https://youtube.com/"),
         {
-          message: "The URL must belong to X/Twitter",
+          message: "The URL must belong to X/Twitter.",
         }
       ),
-    content: z.string(),
-    seasson: z.number().int(),
+    quote: z.string(),
+    season: z.number().int(),
     episode: z.number().int(),
     source: z
       .string()
