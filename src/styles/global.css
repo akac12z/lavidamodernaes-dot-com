@@ -58,6 +58,9 @@
   .share-btn {
     @apply bg-cutre-black text-cutre-white px-2 py-1 border-2 border-cutre-black hover:bg-transparent hover:border-rosa-moderdonia hover:text-rosa-moderdonia transition-colors duration-200;
   }
+  .see-on-yt {
+    @apply bg-rosa-moderdonia text-cutre-white px-2 py-1 sm:px-3 sm:py-1 text-xs sm:text-sm font-bold border-2 border-cutre-black hover:bg-cutre-black hover:text-rosa-moderdonia transition-colors duration-200 flex items-center gap-1;
+  }
   .footer {
     @apply w-full bg-cutre-black p-2 text-cutre-white rounded-tl-md rounded-tr-md flex justify-between items-center;
   }
