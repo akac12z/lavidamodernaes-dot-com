@@ -23,6 +23,8 @@
   --color-rosa-moderdonia: #f9138e;
   --color-cutre-white: #f9f9f9;
   --color-cutre-black: #0f0f0f;
+
+  --breakpoint-xs: 26rem;
 }
 
 @layer base {
