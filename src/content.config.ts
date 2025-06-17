@@ -1,0 +1,31 @@
+import { defineCollection, z } from "astro:content";
+import { glob } from "astro/loaders";
+
+const tweetsCollection = defineCollection({
+  loader: glob({ pattern: "**/*.{json}})", base: "./src/data" }),
+  schema: z.object({
+    id: z.number(),
+    tweet_url: z
+      .string()
+      .url()
+      .refine(
+        (url) =>
+          url.startsWith("https://x.com/") ||
+          url.startsWith("https://twitter.com/"),
+        {
+          message: "The URL must belong to X/Twitter",
+        }
+      ),
+    content: z.string(),
+    seasson: z.number().int(),
+    episode: z.number().int(),
+    source: z
+      .string()
+      .url()
+      .refine((url) => url.startsWith("https://")),
+  }),
+});
+
+export const collections = {
+  tweets: tweetsCollection,
+};

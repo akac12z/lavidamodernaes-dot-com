@@ -1,6 +1,6 @@
 import { z } from "astro:content";
 
-export interface Tweets {
+/*export interface Tweets {
   id: number;
   tweet_url: string; // tweet url which will also act as a id
   content: string;
@@ -8,7 +8,7 @@ export interface Tweets {
   seasson: number;
   episode: number;
   source: string;
-}
+}*/
 export const Tweets = z.object({
   id: z.number(),
   tweet_url: z
