@@ -17,6 +17,7 @@ const tweetsCollection = defineCollection({
           message: "The URL must belong to X/Twitter.",
         }
       ),
+    author: z.string().startsWith("@"),
     quote: z.string(),
     season: z.number().int(),
     episode: z.number().int(),
