@@ -1,9 +1,10 @@
 ---
+import { getCollection } from "astro:content";
+
 import { SquareArrowOutUpRight } from "@lucide/astro";
 import Instagram from "./icons/Instagram.astro";
 import Twitter from "./icons/Twitter.astro";
-
-// PONER AL LINK target="_blank" rel="noopener noreferrer"
+import type { CollectionEntry } from "astro:content";
 
 const getRandomRotation = () => {
   const rotations = [
@@ -19,27 +20,44 @@ const getRandomRotation = () => {
   return rotations[index];
 };
 const rotation = getRandomRotation();
+
+interface Props {
+  entry: CollectionEntry<"tweets">;
+}
+
+export async function getStaticPaths() {
+  const quotes = await getCollection("tweets");
+
+  return quotes.map((entry) => ({
+    params: { id: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+const { author, episode, quote, season, source, tweet_url } = data;
 ---
 
 <article
-  class={`group bg-cutre-white border-4 border-cutre-black p-4 shadow-lg transition-transform duration-500 ${rotation} hover:rotate-0 text-pretty h-fit`}
+  class={`group bg-cutre-white border-4 border-cutre-black p-2 md:p-4 shadow-lg transition-transform duration-500 ${rotation} hover:rotate-0 text-pretty h-fit `}
 >
   <section class="flex justify-between items-center mb-3 sm:mb-4">
-    <p class="font-bold">
+    <p class="font-bold text-sm md:text-base">
       Por
       <span
         class="underline underline-offset-2 decoration-wavy group-hover:decoration-rosa-moderdonia tracking-wider"
-        >{"@telastrujo"}</span
+        >{author}</span
       >
     </p>
     <a
-      href="#"
+      href={source}
       target="_blank"
       rel="noopener noreferrer"
       class="see-on-yt"
       title="Ver en YouTube"
     >
-      Ver E{125}T{2}{" "}
+      Ver T{season}E{episode}{" "}
       <SquareArrowOutUpRight width={10} />
     </a>
   </section>
@@ -48,7 +66,7 @@ const rotation = getRandomRotation();
       #LaVidaModerna es
     </h3>
     <h3 class="text-base sm:text-lg font-bold text-rosa-moderdonia">
-      hacer match con tu hija en Tinder.
+      {quote}
     </h3>
   </section>
   <section class="flex justify-between items-end">
@@ -77,7 +95,7 @@ const rotation = getRandomRotation();
       </section>
     </section>
     <a
-      href="#"
+      href={tweet_url}
       target="_blank"
       rel="noopener noreferrer"
       class="see-on-twitter"

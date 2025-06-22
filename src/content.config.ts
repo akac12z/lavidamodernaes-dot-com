@@ -1,8 +1,10 @@
 import { defineCollection, z } from "astro:content";
-import { glob } from "astro/loaders";
+import { file, glob } from "astro/loaders";
 
 const tweetsCollection = defineCollection({
-  loader: glob({ pattern: "**/*.{json}})", base: "./src/data" }),
+  // loader: glob({ pattern: "**/*.json", base: "./src/content/data" }),
+  // loader: glob({ pattern: "**/*.json", base: "./src/second-data" }),
+  loader: file("src/data/seasons.json"),
   schema: z.object({
     id: z.number(),
     tweet_url: z
