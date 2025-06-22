@@ -4,21 +4,42 @@ import Instagram from "./icons/Instagram.astro";
 import Twitter from "./icons/Twitter.astro";
 
 // PONER AL LINK target="_blank" rel="noopener noreferrer"
+
+const getRandomRotation = () => {
+  const rotations = [
+    "-rotate-3",
+    "-rotate-2",
+    "-rotate-1",
+    "rotate-1",
+    "rotate-2",
+    "rotate-3",
+  ];
+  const index = Math.floor(Math.random() * rotations.length);
+
+  return rotations[index];
+};
+const rotation = getRandomRotation();
 ---
 
 <article
-  class="group bg-cutre-white border-4 border-cutre-black p-4 shadow-lg transition-transform duration-500 rotate-3 hover:rotate-0 text-pretty h-fit"
+  class={`group bg-cutre-white border-4 border-cutre-black p-4 shadow-lg transition-transform duration-500 ${rotation} hover:rotate-0 text-pretty h-fit`}
 >
   <section class="flex justify-between items-center mb-3 sm:mb-4">
     <p class="font-bold">
       Por
       <span
         class="underline underline-offset-2 decoration-wavy group-hover:decoration-rosa-moderdonia tracking-wider"
-        >@{"telastrujo"}</span
+        >{"@telastrujo"}</span
       >
     </p>
-    <a href="#" class="see-on-yt" title="Ver en YouTube">
-      Ver E{25}T{2}{" "}
+    <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="see-on-yt"
+      title="Ver en YouTube"
+    >
+      Ver E{125}T{2}{" "}
       <SquareArrowOutUpRight width={10} />
     </a>
   </section>
@@ -32,18 +53,36 @@ import Twitter from "./icons/Twitter.astro";
   </section>
   <section class="flex justify-between items-end">
     {/* Botones de compartir en la esquina inferior izquierda */}
-    <section class="flex flex-col justify-center items-center">
+    <section class="relative flex flex-col justify-center items-center">
       <span class="text-sm font-bold">Compártela</span>
       <section class="flex gap-2">
-        <a href="#" class="share-btn" title="Compartir en Twitter">
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="share-btn"
+          title="Compartir en Twitter"
+        >
           <Twitter classes="w-4" />
         </a>
-        <a href="#" class="share-btn" title="Compartir en Instagram">
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="share-btn"
+          title="Compartir en Instagram"
+        >
           <Instagram classes="w-4" />
         </a>
       </section>
     </section>
-    <a href="#" class="see-on-twitter" title="Ver en X/Twwitter">
+    <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="see-on-twitter"
+      title="Ver en X/Twwitter"
+    >
       Ver en Twitter
       <SquareArrowOutUpRight width={10} />
     </a>
