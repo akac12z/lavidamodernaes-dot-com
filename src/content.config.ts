@@ -5,6 +5,7 @@ const tweetsCollection = defineCollection({
   // loader: glob({ pattern: "**/*.json", base: "./src/content/data" }),
   // loader: glob({ pattern: "**/*.json", base: "./src/second-data" }),
   loader: file("src/data/seasons.json"),
+  // loader: file("src/seasons/secondSeasons.json"),
   schema: z.object({
     id: z.number(),
     tweet_url: z
