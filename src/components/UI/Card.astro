@@ -1,5 +1,5 @@
 ---
-import { SquareArrowOutUpRight } from "@lucide/astro";
+import { Crop, Focus, Scan, SquareArrowOutUpRight } from "@lucide/astro";
 import Instagram from "./icons/Instagram.astro";
 import Twitter from "./icons/Twitter.astro";
 import type { CollectionEntry } from "astro:content";
@@ -44,7 +44,7 @@ const { author, episode, quote, season, source, tweet_url } = data;
     <p class="font-bold text-sm md:text-base">
       Por
       <span
-        class="underline underline-offset-2 decoration-wavy group-hover:decoration-rosa-moderdonia tracking-wider"
+        class="underline underline-offset-4 decoration-wavy group-hover:decoration-rosa-moderdonia tracking-wider"
         >{author}</span
       >
     </p>
@@ -67,14 +67,17 @@ const { author, episode, quote, season, source, tweet_url } = data;
       {quote}
     </h3>
   </section>
-  <section class="flex justify-between items-end">
-    <button
-      class=""
-      onclick={`window.focusCard && window.focusCard(${JSON.stringify(entry)})`}
-      title="Enfocar tarjeta"
-    >
-      Pantallazo
-    </button>
+  <section class="flex justify-between items-center">
+    <div class="w-fit h-auto">
+      <button
+        class="focus-card-btn px-2 py-1 text-cutre-black font-bold flex items-center gap-x-2 shadow drop-shadow-rosa-moderdonia shadow-rosa-moderdonia text-sm"
+        type="button"
+        onclick="focusThisCard(this)"
+        title="Enfocar tarjeta"
+      >
+        Haz pantallazo <Focus size={20} class="text-cutre-black" />
+      </button>
+    </div>
     {/* Botones de compartir en la esquina inferior izquierda */}
     {
       /*
@@ -116,3 +119,27 @@ const { author, episode, quote, season, source, tweet_url } = data;
     </a>
   </section>
 </article>
+<div
+  id="focus-overlay"
+  class="hidden fixed inset-0 z-10 bg-black/50 backdrop-blur-sm"
+>
+</div>
+<script is:inline>
+  function focusThisCard(btn) {
+    if (!btn) return;
+    const card = btn.closest("article");
+    if (!card) return;
+    const overlay = document.getElementById("focus-overlay");
+    if (!overlay) return;
+    overlay.classList.remove("hidden");
+    card.classList.add("focused-card");
+    document.body.style.overflow = "hidden";
+    btn.classList.add("hidden");
+    overlay.onclick = function () {
+      card.classList.remove("focused-card");
+      overlay.classList.add("hidden");
+      document.body.style.overflow = "";
+      btn.classList.remove("hidden");
+    };
+  }
+</script>
