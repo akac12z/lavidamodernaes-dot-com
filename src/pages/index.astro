@@ -5,7 +5,19 @@ import Main from "@UI/Main.astro";
 import Card from "@UI/Card.astro";
 import { getCollection } from "astro:content";
 
-const tweets = await getCollection("tweets");
+// algoritmo Fisher-Yates para devolver una baraja totalmente mezclada
+function shuffleCard<T>(array: T[]): T[] {
+  let copia = [...array];
+  for (let i = copia.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copia[i], copia[j]] = [copia[j], copia[i]];
+  }
+  return copia;
+}
+
+const tweets = shuffleCard(await getCollection("tweets"));
+
+// const tweets = await getCollection("tweets");
 ---
 
 <Layout>
