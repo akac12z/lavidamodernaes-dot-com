@@ -1,6 +1,4 @@
 ---
-import { getCollection } from "astro:content";
-
 import { SquareArrowOutUpRight } from "@lucide/astro";
 import Instagram from "./icons/Instagram.astro";
 import Twitter from "./icons/Twitter.astro";
@@ -25,14 +23,14 @@ interface Props {
   entry: CollectionEntry<"tweets">;
 }
 
-export async function getStaticPaths() {
+/* export async function getStaticPaths() {
   const quotes = await getCollection("tweets");
 
   return quotes.map((entry) => ({
     params: { id: entry.id },
     props: { entry },
   }));
-}
+}*/
 
 const { entry } = Astro.props;
 const { data } = entry;
