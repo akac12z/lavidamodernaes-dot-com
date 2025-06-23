@@ -68,30 +68,42 @@ const { author, episode, quote, season, source, tweet_url } = data;
     </h3>
   </section>
   <section class="flex justify-between items-end">
+    <button
+      class=""
+      onclick={`window.focusCard && window.focusCard(${JSON.stringify(entry)})`}
+      title="Enfocar tarjeta"
+    >
+      Pantallazo
+    </button>
     {/* Botones de compartir en la esquina inferior izquierda */}
-    <section class="relative flex flex-col justify-center items-center">
-      <span class="text-sm font-bold">Compártela</span>
-      <section class="flex gap-2">
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="share-btn"
-          title="Compartir en Twitter"
-        >
-          <Twitter classes="w-4" />
-        </a>
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="share-btn"
-          title="Compartir en Instagram"
-        >
-          <Instagram classes="w-4" />
-        </a>
-      </section>
-    </section>
+    {
+      /*
+        <section class="relative flex flex-col justify-center items-center">
+          <span class="text-sm font-bold">Compártela</span>
+          <section class="flex gap-2">
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="share-btn"
+            title="Compartir en Twitter"
+          >
+            <Twitter classes="w-4" />
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="share-btn"
+            title="Compartir en Instagram"
+          >
+            <Instagram classes="w-4" />
+          </a>
+          </section>
+        </section>
+      
+      */
+    }
     <a
       href={tweet_url}
       target="_blank"
