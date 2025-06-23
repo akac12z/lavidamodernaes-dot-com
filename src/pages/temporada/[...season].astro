@@ -15,7 +15,7 @@ export async function getStaticPaths() {
   const quotes = await getCollection("tweets");
 
   return quotes.map((entry) => ({
-    params: { id: entry.id },
+    params: { season: entry.data.season },
     props: { entry },
   }));
 }
