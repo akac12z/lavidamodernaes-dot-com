@@ -66,4 +66,7 @@
   .footer {
     @apply w-full bg-cutre-black p-2 text-cutre-white rounded-tl-md rounded-tr-md flex justify-between items-center;
   }
+  .focused-card {
+    @apply fixed left-1/2 top-1/2 z-50 w-11/12 xs:max-w-96 shadow-2xl -translate-1/2 transition-all;
+  }
 }
