@@ -48,10 +48,10 @@
 }
 
 @layer components {
-  .btn-season {
+  .btn-inactive {
     @apply text-sm bg-cutre-black px-1 sm:px-2 py-0.5 sm:py-1 text-cutre-white border-2 border-cutre-black font-bold cursor-pointer  hover:text-cutre-black hover:bg-cutre-white hover:transition-colors duration-300;
   }
-  .btn-all-season {
+  .btn-active {
     @apply text-sm bg-cutre-white px-1 sm:px-2 py-0.5 sm:py-1 text-cutre-black border-2 border-cutre-black font-bold cursor-pointer hover:bg-cutre-black hover:text-cutre-white hover:transition-colors duration-300;
   }
   .see-on-twitter {
