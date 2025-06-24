@@ -1,6 +1,5 @@
 ---
-import Shuffle from "./button/Shuffle.astro";
-import ShuffleButton from "./button/ShuffleBtn.tsx";
+import Shuffle from "./button/Shuffle.tsx";
 ---
 
 <main class="overflow-x-hidden">
@@ -32,5 +31,5 @@ import ShuffleButton from "./button/ShuffleBtn.tsx";
     </h2>
   </section>
 
-  <Shuffle />
+  <Shuffle client:idle />
 </main>
