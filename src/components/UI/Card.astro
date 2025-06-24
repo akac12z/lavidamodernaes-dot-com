@@ -23,15 +23,6 @@ interface Props {
   entry: CollectionEntry<"tweets">;
 }
 
-/* export async function getStaticPaths() {
-  const quotes = await getCollection("tweets");
-
-  return quotes.map((entry) => ({
-    params: { id: entry.id },
-    props: { entry },
-  }));
-}*/
-
 const { entry } = Astro.props;
 const { data } = entry;
 const { author, episode, quote, season, source, tweet_url } = data;
@@ -70,7 +61,7 @@ const { author, episode, quote, season, source, tweet_url } = data;
   <section class="flex justify-between items-center">
     <div class="w-fit h-auto">
       <button
-        class="focus-card-btn px-2 py-1 text-cutre-black font-bold flex items-center gap-x-2 shadow drop-shadow-rosa-moderdonia shadow-rosa-moderdonia text-sm"
+        class="cursor-pointer focus-card-btn px-2 py-1 text-cutre-black font-bold flex items-center gap-x-2 shadow drop-shadow-rosa-moderdonia shadow-rosa-moderdonia text-sm"
         type="button"
         onclick="focusThisCard(this)"
         title="Enfocar tarjeta"
