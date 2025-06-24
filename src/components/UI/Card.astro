@@ -121,15 +121,20 @@ const { author, episode, quote, season, source, tweet_url } = data;
     if (!card) return;
     const overlay = document.getElementById("focus-overlay");
     if (!overlay) return;
+    const shuffleBtn = document.querySelector(".shuffle-btn");
+
     overlay.classList.remove("hidden");
     card.classList.add("focused-card");
     document.body.style.overflow = "hidden";
     btn.classList.add("hidden");
+    shuffleBtn.classList.add("hidden");
+
     overlay.onclick = function () {
       card.classList.remove("focused-card");
       overlay.classList.add("hidden");
       document.body.style.overflow = "";
       btn.classList.remove("hidden");
+      shuffleBtn.classList.remove("hidden");
     };
   }
 </script>
