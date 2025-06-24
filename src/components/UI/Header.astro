@@ -16,6 +16,11 @@ const seasonPaths: SeasonPath[] = [
 ];
 
 const currentPath = Astro.url.pathname;
+// Normaliza la ruta eliminando la barra final si existe (y no es la raíz)
+const normalizedPath =
+  Astro.url.pathname.length > 1
+    ? Astro.url.pathname.replace(/\/$/, "")
+    : Astro.url.pathname;
 ---
 
 <header
@@ -29,7 +34,7 @@ const currentPath = Astro.url.pathname;
           <li>
             <a
               href={href}
-              class={currentPath === href ? "btn-active" : "btn-inactive"}
+              class={normalizedPath === href ? "btn-active" : "btn-inactive"}
             >
               {text}
             </a>
