@@ -21,6 +21,9 @@
       ],
       "@interface/*": [
         "./src/interfaces/*"
+      ],
+      "@imageAssets/*": [
+        "./src/assets/images/*"
       ]
     },
     "jsx": "react-jsx",
