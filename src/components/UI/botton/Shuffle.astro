@@ -1,0 +1,42 @@
+---
+import { ShuffleIcon } from "@lucide/astro";
+---
+
+<button id="shuffle-btn" title="Desordenar Tarjetas" class="shuffle-btn">
+  <span class="hidden sm:inline">Desordenar</span>
+  <ShuffleIcon size={18} />
+</button>
+
+<script>
+  const shuffleBtn = document.getElementById("shuffle-btn");
+  const cardsContainer = document.querySelector<HTMLElement>("section.grid");
+
+  function shuffle<T>(array: T[]): T[] {
+    let currentIndex = array.length,
+      randomIndex;
+
+    while (currentIndex != 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
+    }
+    return array;
+  }
+
+  if (shuffleBtn && cardsContainer) {
+    shuffleBtn.addEventListener("click", () => {
+      const cards = Array.from(cardsContainer.querySelectorAll("article"));
+      const shuffledCards = shuffle(cards);
+
+      // Limpiar el contenedor y añadir las tarjetas barajadas
+      cards.forEach((card) => card.remove());
+      shuffledCards.forEach((card) => {
+        cardsContainer.appendChild(card);
+      });
+    });
+  }
+</script>
