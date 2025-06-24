@@ -64,7 +64,7 @@
     @apply shrink-0 bg-rosa-moderdonia text-cutre-white px-2 py-1 sm:px-3 sm:py-1 text-xs sm:text-sm font-bold border-2 border-cutre-black hover:bg-cutre-black hover:text-rosa-moderdonia transition-colors duration-200 flex items-center gap-1;
   }
   .shuffle-btn {
-    @apply cursor-pointer px-2 py-1 flex items-center gap-x-2 fixed bottom-3 left-3 lg:left-32 xl:left-60 2xl:left-96 z-50 bg-rosa-moderdonia border-2 border-cutre-black text-cutre-white font-bold shadow-lg hover:bg-transparent hover:backdrop-blur-lg hover:text-rosa-moderdonia transition-all duration-300;
+    @apply cursor-pointer px-2 py-1 flex items-center gap-x-2 fixed bottom-3 left-3 lg:left-32 xl:left-60 2xl:left-96 z-50 bg-rosa-moderdonia border-2 border-cutre-black text-cutre-white font-bold shadow-lg hover:bg-transparent hover:backdrop-blur-lg hover:text-cutre-black transition-all duration-300;
   }
   .footer {
     @apply w-full bg-cutre-black p-2 text-cutre-white rounded-tl-md rounded-tr-md flex justify-between items-center;
