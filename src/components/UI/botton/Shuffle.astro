@@ -8,28 +8,32 @@ import { ShuffleIcon } from "@lucide/astro";
 </button>
 
 <script>
-  const shuffleBtn = document.getElementById("shuffle-btn");
-  const cardsContainer = document.querySelector<HTMLElement>("section.grid");
+  function setupShuffleButton() {
+    const shuffleBtn = document.getElementById("shuffle-btn");
+    const cardsContainer = document.querySelector<HTMLElement>("section.grid");
 
-  function shuffle<T>(array: T[]): T[] {
-    let currentIndex = array.length,
-      randomIndex;
-
-    while (currentIndex != 0) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex],
-        array[currentIndex],
-      ];
+    if (!shuffleBtn || !cardsContainer) {
+      return;
     }
-    return array;
-  }
 
-  if (shuffleBtn && cardsContainer) {
+    function shuffle<T>(array: T[]): T[] {
+      let currentIndex = array.length,
+        randomIndex;
+
+      while (currentIndex != 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        [array[currentIndex], array[randomIndex]] = [
+          array[randomIndex],
+          array[currentIndex],
+        ];
+      }
+      return array;
+    }
+
     shuffleBtn.addEventListener("click", () => {
-      const cards = Array.from(cardsContainer.querySelectorAll("article"));
+      const cards = Array.from(cardsContainer.querySelectorAll("article.card"));
       const shuffledCards = shuffle(cards);
 
       // Limpiar el contenedor y añadir las tarjetas barajadas
@@ -39,4 +43,6 @@ import { ShuffleIcon } from "@lucide/astro";
       });
     });
   }
+
+  document.addEventListener("astro:page-load", setupShuffleButton);
 </script>
