@@ -1,0 +1,23 @@
+---
+import "../styles/global.css";
+import BaseHead from "@SEO/BaseHead.astro";
+
+import Footer from "@UI/Footer.astro";
+import Header from "@UI/Header.astro";
+import Logo from "@UI/Logo.astro";
+---
+
+<!doctype html>
+<html lang="es">
+  <BaseHead>
+    <slot name="head" />
+  </BaseHead>
+  <body class="mx-auto max-w-3xl grid grid-cols-1">
+    <header
+      class="p-2 sm:p-3 flex items-center gap-y-3 justify-center border-b-4 backdrop-blur-xs border-cutre-black sticky top-0 z-50"
+    >
+      <Logo />
+    </header>
+    <slot />
+  </body>
+</html>

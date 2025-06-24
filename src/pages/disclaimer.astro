@@ -1,0 +1,59 @@
+---
+import LayoutDisclaimer from "@layout/LayoutDisclaimer.astro";
+import DisclaimerSEO from "@SEO/DisclaimerSEO.astro";
+---
+
+<LayoutDisclaimer>
+  <DisclaimerSEO />
+  <main
+    class="font-bold overflow-hidden mx-auto px-3 max-w-xl text-pretty flex flex-col pb-12"
+  >
+    <h1 class="text-center py-5">Disclaimer</h1>
+    <section class="">
+      <p class="">
+        Lo siento pero tengo que ponerlo para que todas/os estemos contentos/as
+        y explicar por qué he hecho lo que he hecho.
+      </p>
+      <p class="mt-2">
+        Seguiré el principio <span class="font-bold text-rosa-moderdonia"
+          >NON PLUS TURRA</span
+        >
+      </p>
+      <ul class="my-6 list-disc ml-5">
+        <li class="mb-3 text-sm sm:text-base">
+          No me hago responsable de los/as ofendidos/as que pueda causar estos
+          tweets. Yo solo soy un medium que ha recogido estas maravillas de
+          frases y las ha puesto todas juntas.
+        </li>
+        <li class="mb-3 text-sm sm:text-base">
+          Hay tweets que no he encontrado porque no han dejado autor, la cuenta
+          está suspendida, es privada o no he encontrado el tweet dentro de ese
+          autor y los he redirigido a la cuenta de @vidamoderna aunque puedes
+          ver el tweet en el video de YouTube.
+        </li>
+        <li class="mb-3 text-sm sm:text-base">
+          Si en algún tweet pone un nickname y al ir al tweet aparece otro
+          distinto, es porque el usuario se lo puede haber cambiado, yo solo he
+          copiado el link que Alex Pinacho puso en la descripción del video. Si
+          no he encontrado el usuario que sale en LVM y tweet es el mismo y la
+          fecha es correcta, redirigiré a @vidamoderna.
+        </li>
+        <li class="mb-3 text-sm sm:text-base">
+          Los derechos de autor he intentado mantenerlos al pie de la letra a
+          menos que no haya encontrado el tweet porque no se hace referencia al
+          autor y en Twitter no aparece.
+        </li>
+        <li class="mb-3 text-sm sm:text-base">
+          Si crees que me he equivocado en algo o hay alguna falla, te agradezco
+          que me hables por Instagram y así poder solucionarlo (o si eres
+          técnico, me hagas una PR en <a
+            href="https://github.com/akac12z/c12z-dot-io"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline">GitHub</a
+          >)
+        </li>
+      </ul>
+    </section>
+  </main>
+</LayoutDisclaimer>

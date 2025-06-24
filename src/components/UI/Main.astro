@@ -1,10 +1,11 @@
 ---
+import { SquareArrowOutUpRight } from "@lucide/astro";
 import Shuffle from "./button/Shuffle.tsx";
 ---
 
 <main class="overflow-x-hidden">
   <section
-    class="bg-rosa-moderdonia px-2 pt-6 sm:pt-10 pb-10 border-b-4 border-cutre-black mx-auto flex flex-col items-center justify-center text-balance"
+    class="bg-rosa-moderdonia px-2 pt-6 sm:pt-10 border-b-4 border-cutre-black mx-auto flex flex-col items-center justify-center text-balance"
   >
     <h1 class="text-center text-cutre-white mb-4 text-4xl">¡Gora Moderdona!</h1>
     <p class="text-lg text-center font-semibold">
@@ -18,9 +19,24 @@ import Shuffle from "./button/Shuffle.tsx";
     >
       Keep it Cutre ✨
     </span>
+    <section class="pt-10 w-full flex justify-between items-center">
+      <h2 class="text-cutre-white text-sm flex gap-1">
+        with🤍<a
+          href="https://www.instagram.com/akac12z/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline flex justify-center items-center"
+          title="Ver instagram de Chema"
+        >
+          Chema <SquareArrowOutUpRight size={10} />
+        </a>
+      </h2>
+      <h2 class="text-xs font-bold underline text-cutre-white">
+        <a href="/disclaimer">Disclaimer Legal</a>
+      </h2>
+    </section>
   </section>
 
-  {/* quote's section */}
   <slot />
 
   <section class="py-8 text-center flex items-center justify-center">

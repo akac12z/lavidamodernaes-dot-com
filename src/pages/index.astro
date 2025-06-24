@@ -4,6 +4,7 @@ import Main from "@UI/Main.astro";
 
 import Card from "@UI/Card.astro";
 import { getCollection } from "astro:content";
+import MainSEO from "@SEO/MainSEO.astro";
 
 // algoritmo Fisher-Yates para devolver una baraja totalmente mezclada
 function shuffleCard<T>(array: T[]): T[] {
@@ -19,6 +20,7 @@ const tweets = shuffleCard(await getCollection("tweets"));
 ---
 
 <Layout>
+  <MainSEO />
   <Main>
     <section
       class="card-container mx-auto py-6 px-4 xs:px-16 sm:px-4 grid grid-cols-1 grid-rows-auto sm:grid-cols-2 gap-6 overflow-y-hidden transition-all"
