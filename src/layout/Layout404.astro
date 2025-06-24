@@ -1,0 +1,13 @@
+---
+import BaseHead from "@SEO/BaseHead.astro";
+---
+
+<!doctype html>
+<html lang="es">
+  <BaseHead>
+    <slot name="head" />
+  </BaseHead>
+  <body class="mx-auto max-w-3xl grid grid-cols-1">
+    <slot />
+  </body>
+</html>

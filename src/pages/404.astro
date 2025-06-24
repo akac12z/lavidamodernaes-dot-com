@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import Layout404 from "@layout/Layout404.astro";
+import Calvario from "@imageAssets/el-calvario-de-don-juan-ingnacio-delgado.gif";
+---
+
+<Layout404>
+  <main class="overflow-x-hidden bg-rosa-moderdonia h-screen mx-auto max-w-xl">
+    <section class="flex flex-col items-center justify-center my-6">
+      <section>
+        <h1 class="text-center text-4xl text-pretty text-cutre-white">
+          ¡Error 404!
+        </h1>
+        <h2 class="text-2xl text-cutre-black text-center">
+          Has caido en la página del calvario
+        </h2>
+      </section>
+      <div class="mx-2 my-8">
+        <Image
+          class="rounded-lg flex aspect-video"
+          src={Calvario}
+          width={500}
+          height={100}
+          alt="meme de Don JuanIgnacio Delgado teniendo el calvario dentro"
+          quality="mid"
+          loading="eager"
+        />
+      </div>
+      <section class="text-center flex flex-col gap-y-6 px-12">
+        <p class="text-pretty text-lg font-medium text-cutre-white text-center">
+          Aquí solo vas a encontrar <span class="font-bold"
+            >Calvario y 2 reyes</span
+          >. Creo que deberías irte. Ya.
+        </p>
+        <a
+          href="/"
+          class="underline underline-offset-4 decoration-wavy cursor-pointer text-4xl"
+          >Irme de aquí</a
+        >
+      </section>
+    </section>
+  </main>
+</Layout404>
