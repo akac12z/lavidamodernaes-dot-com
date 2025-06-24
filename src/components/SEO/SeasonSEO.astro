@@ -1,0 +1,18 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { SITE_DEFAULT_CONFIG } from "./siteInfo";
+
+const { entry } = Astro.props;
+const tweets = entry as CollectionEntry<"tweets">;
+
+const { data } = tweets;
+const { season, quote } = data;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<title>LVM - Temporada{season}</title>
+<meta name="title" content={`LVM - T${season}`} />
+<meta name="description" content={`La vida moderna es ${quote}`} />
+<meta name="author" content={SITE_DEFAULT_CONFIG.author} />
+
+<link rel="canonical" href={canonicalURL} />

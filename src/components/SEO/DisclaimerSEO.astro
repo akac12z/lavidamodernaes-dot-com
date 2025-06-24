@@ -1,0 +1,12 @@
+---
+import { SITE_DISCLAIMER_CONFIG } from "./siteInfo";
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<title>{SITE_DISCLAIMER_CONFIG.title}</title>
+<meta content={SITE_DISCLAIMER_CONFIG.title} name="title" />
+<meta name="description" content={SITE_DISCLAIMER_CONFIG.description} />
+<meta content={SITE_DISCLAIMER_CONFIG.author} name="author" />
+
+<link rel="canonical" href={canonicalURL} />
