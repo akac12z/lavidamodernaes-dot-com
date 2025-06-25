@@ -57,7 +57,7 @@ const { author, episode, quote, season, source, tweet_url } = data;
       {quote}
     </h3>
   </section>
-  <section class="flex justify-between items-center">
+  <section class="flex justify-between items-end">
     <div class="w-fit h-auto">
       <button
         class="cursor-pointer focus-card-btn px-2 py-1 text-cutre-black font-bold flex items-center gap-x-2 shadow drop-shadow-rosa-moderdonia shadow-rosa-moderdonia text-sm"
@@ -67,36 +67,12 @@ const { author, episode, quote, season, source, tweet_url } = data;
       >
         Haz pantallazo <Focus size={20} class="text-cutre-black" />
       </button>
+      <span
+        class="la-promosio hidden text-xs text-rosa-moderdonia font-bold tracking-widest align-text-bottom"
+        >lavidamodernaes.com</span
+      >
     </div>
-    {/* Botones de compartir en la esquina inferior izquierda */}
-    {
-      /*
-        <section class="relative flex flex-col justify-center items-center">
-          <span class="text-sm font-bold">Compártela</span>
-          <section class="flex gap-2">
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="share-btn"
-            title="Compartir en Twitter"
-          >
-            <Twitter classes="w-4" />
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="share-btn"
-            title="Compartir en Instagram"
-          >
-            <Instagram classes="w-4" />
-          </a>
-          </section>
-        </section>
-      
-      */
-    }
+
     <a
       href={tweet_url}
       target="_blank"
@@ -117,17 +93,19 @@ const { author, episode, quote, season, source, tweet_url } = data;
 <script is:inline>
   function focusThisCard(btn) {
     if (!btn) return;
-    const card = btn.closest("article");
+    const card = btn.closest(".card-component");
     if (!card) return;
     const overlay = document.getElementById("focus-overlay");
     if (!overlay) return;
     const shuffleBtn = document.querySelector(".shuffle-btn");
+    const laPromosio = card.querySelector(".la-promosio");
 
     overlay.classList.remove("hidden");
     card.classList.add("focused-card");
     document.body.style.overflow = "hidden";
     btn.classList.add("hidden");
     shuffleBtn.classList.add("hidden");
+    laPromosio.classList.remove("hidden");
 
     overlay.onclick = function () {
       card.classList.remove("focused-card");
@@ -135,6 +113,7 @@ const { author, episode, quote, season, source, tweet_url } = data;
       document.body.style.overflow = "";
       btn.classList.remove("hidden");
       shuffleBtn.classList.remove("hidden");
+      laPromosio.classList.add("hidden");
     };
   }
 </script>
