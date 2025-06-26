@@ -1,6 +1,7 @@
 ---
 import { SquareArrowOutUpRight } from "@lucide/astro";
 import Shuffle from "./button/Shuffle.tsx";
+import BuyABeer from "./button/BuyABeer.astro";
 ---
 
 <main class="overflow-x-hidden">
@@ -19,6 +20,7 @@ import Shuffle from "./button/Shuffle.tsx";
     >
       Keep it Cutre ✨
     </span>
+
     <section class="pt-10 w-full flex justify-between items-center">
       <h2 class="text-cutre-white text-sm flex gap-1">
         with🤍<a
@@ -31,6 +33,7 @@ import Shuffle from "./button/Shuffle.tsx";
           Chema <SquareArrowOutUpRight size={10} />
         </a>
       </h2>
+
       <h2 class="text-xs font-bold underline text-cutre-white">
         <a href="/disclaimer">Disclaimer Legal</a>
       </h2>
@@ -48,4 +51,5 @@ import Shuffle from "./button/Shuffle.tsx";
   </section>
 
   <Shuffle client:idle />
+  <BuyABeer />
 </main>
