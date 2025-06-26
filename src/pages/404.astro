@@ -2,9 +2,12 @@
 import { Image } from "astro:assets";
 import Layout404 from "@layout/Layout404.astro";
 import Calvario from "@imageAssets/el-calvario-de-don-juan-ingnacio-delgado.gif";
+import Error404SEO from "@SEO/Error404SEO.astro";
 ---
 
 <Layout404>
+  <Error404SEO slot="head" />
+
   <main class="overflow-x-hidden bg-rosa-moderdonia h-screen mx-auto max-w-xl">
     <section class="flex flex-col items-center justify-center my-6">
       <section>
