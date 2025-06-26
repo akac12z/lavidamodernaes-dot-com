@@ -30,7 +30,7 @@ const filteredTweets = tweets.filter((tweet) => tweet.data.season === season);
 ---
 
 <Layout>
-  <SeasonSEO entry={entry} />
+  <SeasonSEO entry={entry} slot="head" />
   <Main>
     <section
       class="card-container mx-auto py-6 px-4 xs:px-16 sm:px-4 grid grid-cols-1 grid-rows-auto sm:grid-cols-2 gap-6 overflow-y-hidden"
