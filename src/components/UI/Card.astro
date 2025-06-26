@@ -99,12 +99,14 @@ const { author, episode, quote, season, source, tweet_url } = data;
     if (!overlay) return;
     const shuffleBtn = document.querySelector(".shuffle-btn");
     const laPromosio = card.querySelector(".la-promosio");
+    const buyABeer = document.querySelector(".buy-a-beer-btn");
 
     overlay.classList.remove("hidden");
     card.classList.add("focused-card");
     document.body.style.overflow = "hidden";
     btn.classList.add("hidden");
     shuffleBtn.classList.add("hidden");
+    buyABeer.classList.add("hidden");
     laPromosio.classList.remove("hidden");
 
     overlay.onclick = function () {
@@ -113,6 +115,7 @@ const { author, episode, quote, season, source, tweet_url } = data;
       document.body.style.overflow = "";
       btn.classList.remove("hidden");
       shuffleBtn.classList.remove("hidden");
+      buyABeer.classList.remove("hidden");
       laPromosio.classList.add("hidden");
     };
   }
