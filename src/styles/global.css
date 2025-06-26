@@ -67,7 +67,7 @@
     @apply cursor-pointer px-2 py-1 flex items-center gap-x-2 fixed bottom-3 left-3 lg:left-32 xl:left-60 2xl:left-96 z-50 bg-rosa-moderdonia border-2 border-cutre-black text-cutre-white font-bold shadow-lg hover:bg-transparent hover:backdrop-blur-lg hover:text-cutre-black transition-all duration-300;
   }
   .buy-a-beer-btn {
-    @apply flex cursor-pointer p-1 text-sm justify-center items-center gap-x-1 font-bold bg-amber-500 text-cutre-black border border-cutre-black fixed bottom-3 right-3 lg:right-32 xl:right-60 2xl:right-96 z-50;
+    @apply flex cursor-pointer p-1 text-sm justify-center items-center gap-x-1 font-bold bg-amber-500 text-cutre-black border-2 border-cutre-black fixed bottom-3 right-3 lg:right-32 xl:right-60 2xl:right-96 z-50;
   }
 
   .footer {
