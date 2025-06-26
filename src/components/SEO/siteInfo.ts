@@ -19,3 +19,10 @@ export const SITE_DISCLAIMER_CONFIG: SiteConfig = {
   url: "https://lavidamodernaes.com",
   author: "Chema | c12z",
 };
+export const SITE_ERROR_INFO: SiteConfig = {
+  title: "Error en LaVidaModerna es...",
+  description:
+    "Has caído en la página del Calvario. Esta página de lavidamodernaes.com no existe. Chorry.",
+  url: "https://lavidamodernaes.com",
+  author: "Chema | c12z",
+};

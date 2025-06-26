@@ -1,5 +1,5 @@
 ---
-import { SITE_DEFAULT_CONFIG } from "./siteInfo";
+import { SITE_ERROR_INFO } from "./siteInfo";
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
@@ -8,17 +8,17 @@ const ogImgAlt =
   "Imagen del calvario porque la página de lavidamodernaes.com no existe";
 ---
 
-<title>{SITE_DEFAULT_CONFIG.title}</title>
-<meta content={SITE_DEFAULT_CONFIG.title} name="title" />
-<meta name="description" content={SITE_DEFAULT_CONFIG.description} />
-<meta content={SITE_DEFAULT_CONFIG.author} name="author" />
+<title>{SITE_ERROR_INFO.title}</title>
+<meta content={SITE_ERROR_INFO.title} name="title" />
+<meta name="description" content={SITE_ERROR_INFO.description} />
+<meta content={SITE_ERROR_INFO.author} name="author" />
 
 <link rel="canonical" href={canonicalURL} />
 
-<meta property="og:title" content={SITE_DEFAULT_CONFIG.title} />
+<meta property="og:title" content={SITE_ERROR_INFO.title} />
 <meta property="og:url" content={canonicalURL} />
-<meta property="og:description" content={SITE_DEFAULT_CONFIG.description} />
-<meta content={SITE_DEFAULT_CONFIG.title} property="og:site_name" />
+<meta property="og:description" content={SITE_ERROR_INFO.description} />
+<meta content={SITE_ERROR_INFO.title} property="og:site_name" />
 <meta content="es" property="og:locale" />
 <meta property="og:image" content={ogImg} />
 <meta property="og:image:alt" content={ogImgAlt} />
@@ -29,8 +29,8 @@ const ogImgAlt =
 <meta property="og:type" content="website" />
 
 {/* Twitter */}
-<meta name="twitter:title" content={SITE_DEFAULT_CONFIG.title} />
-<meta name="twitter:description" content={SITE_DEFAULT_CONFIG.description} />
+<meta name="twitter:title" content={SITE_ERROR_INFO.title} />
+<meta name="twitter:description" content={SITE_ERROR_INFO.description} />
 <meta name="twitter:image" content={ogImg} />
 <meta name="twitter:image:alt" content={ogImgAlt} />
 <meta name="twitter:card" content="summary_large_image" />
