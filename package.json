@@ -1,25 +1,25 @@
 {
-  "name": "lavidamodernaes",
-  "type": "module",
-  "version": "1.4.0",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/react": "4.3.0",
-    "@astrojs/sitemap": "3.4.1",
-    "@astrojs/vercel": "8.2.0",
-    "@lucide/astro": "0.516.0",
-    "@tailwindcss/vite": "4.1.10",
-    "@types/react": "19.1.8",
-    "@types/react-dom": "19.1.6",
-    "astro": "5.9.3",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "sharp": "0.34.2",
-    "tailwindcss": "4.1.10"
-  }
+	"name": "lavidamodernaes",
+	"type": "module",
+	"version": "1.4.0",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/react": "5.0.7",
+		"@astrojs/sitemap": "3.7.3",
+		"@astrojs/vercel": "10.0.8",
+		"@lucide/astro": "1.17.0",
+		"@tailwindcss/vite": "4.3.0",
+		"@types/react": "19.2.17",
+		"@types/react-dom": "19.2.3",
+		"astro": "6.4.6",
+		"react": "19.2.7",
+		"react-dom": "19.2.7",
+		"sharp": "0.35.1",
+		"tailwindcss": "4.3.0"
+	}
 }
