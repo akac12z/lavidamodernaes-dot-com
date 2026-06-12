@@ -15,8 +15,10 @@ interface Props {
 export async function getStaticPaths() {
   const quotes = await getCollection("tweets");
 
-  return quotes.map((entry) => ({
-    params: { season: entry.data.season },
+  const uniqueSeasons = [...new Map(quotes.map((e) => [e.data.season, e])).values()];
+
+  return uniqueSeasons.map((entry) => ({
+    params: { season: String(entry.data.season) },
     props: { entry },
   }));
 }
