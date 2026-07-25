@@ -5,51 +5,51 @@ import BuyABeer from "./button/BuyABeer.astro";
 ---
 
 <main class="overflow-x-hidden">
-  <section
-    class="bg-rosa-moderdonia px-2 pt-6 sm:pt-10 border-b-4 border-cutre-black mx-auto flex flex-col items-center justify-center text-balance"
-  >
-    <h1 class="text-center text-cutre-white mb-4 text-4xl">¡Gora Moderdona!</h1>
-    <p class="text-lg text-center font-semibold">
-      Esto es un homenaje a todas esas frases de <span
-        class="underline decoration-wavy font-bold tracking-wider"
-        >#LaVidaModerna es</span
-      > y al programa que tanto nos divirtió y que tantos ofendiditos creó.
-    </p>
-    <span
-      class="text-lg mt-8 text-cutre-black bg-cutre-white px-2 py-1 border-4 border-cutre-black transform rotate-12 font-bold"
-    >
-      Keep it Cutre ✨
-    </span>
+	<section
+		class="bg-rosa-moderdonia px-2 pt-6 sm:pt-10 border-b-4 border-cutre-black mx-auto flex flex-col items-center justify-center text-balance"
+	>
+		<h1 class="text-center text-cutre-white mb-4 text-4xl">¡Gora Moderdona!</h1>
+		<p class="text-lg text-center font-semibold">
+			Esto es un homenaje a todas esas frases de <span
+				class="underline decoration-wavy font-bold tracking-wider"
+				>#LaVidaModerna es</span
+			> y al programa que tanto nos divirtió y que tantos ofendiditos creó.
+		</p>
+		<span
+			class="text-lg mt-8 text-cutre-black bg-cutre-white px-2 py-1 border-4 border-cutre-black transform rotate-12 font-bold"
+		>
+			Keep it Cutre ✨
+		</span>
 
-    <section class="pt-10 w-full flex justify-between items-center">
-      <h2 class="text-cutre-white text-sm flex gap-1">
-        with🤍<a
-          href="https://x.com/akac12z"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="underline flex justify-center items-center gap-x-1"
-          title="Ver instagram de Chema"
-        >
-          Chema <SquareArrowOutUpRight size={10} />
-        </a>
-      </h2>
+		<section class="pt-10 w-full flex justify-between items-center">
+			<h2 class="text-cutre-white text-sm flex gap-1">
+				with🤍<a
+					href="https://x.com/cz__chan"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="underline flex justify-center items-center gap-x-1"
+					title="Ver instagram de Chema"
+				>
+					Chema <SquareArrowOutUpRight size={10} />
+				</a>
+			</h2>
 
-      <h2 class="text-xs font-bold underline text-cutre-white">
-        <a href="/disclaimer">Disclaimer Legal</a>
-      </h2>
-    </section>
-  </section>
+			<h2 class="text-xs font-bold underline text-cutre-white">
+				<a href="/disclaimer">Disclaimer Legal</a>
+			</h2>
+		</section>
+	</section>
 
-  <slot />
+	<slot />
 
-  <section class="py-8 text-center flex items-center justify-center">
-    <h2
-      class="px-2 py-1 border-4 border-cutre-blackb bg-rosa-moderdonia text-lg"
-    >
-      No hay más frases <span class="text-xs">(por ahora) </span>
-    </h2>
-  </section>
+	<section class="py-8 text-center flex items-center justify-center">
+		<h2
+			class="px-2 py-1 border-4 border-cutre-blackb bg-rosa-moderdonia text-lg"
+		>
+			No hay más frases <span class="text-xs">(por ahora) </span>
+		</h2>
+	</section>
 
-  <Shuffle client:idle />
-  <BuyABeer />
+	<Shuffle client:idle />
+	<BuyABeer />
 </main>

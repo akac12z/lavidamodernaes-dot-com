@@ -5,34 +5,100 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const ogImg = new URL("./calvario-og404.png", Astro.site);
 const ogImgAlt =
-  "Imagen del calvario porque la página de lavidamodernaes.com no existe";
+	"Imagen del calvario porque la página de lavidamodernaes.com no existe";
 ---
 
 <title>{SITE_ERROR_INFO.title}</title>
-<meta content={SITE_ERROR_INFO.title} name="title" />
-<meta name="description" content={SITE_ERROR_INFO.description} />
-<meta content={SITE_ERROR_INFO.author} name="author" />
+<meta
+	content={SITE_ERROR_INFO.title}
+	name="title"
+/>
+<meta
+	name="description"
+	content={SITE_ERROR_INFO.description}
+/>
+<meta
+	content={SITE_ERROR_INFO.author}
+	name="author"
+/>
 
-<link rel="canonical" href={canonicalURL} />
+<link
+	rel="canonical"
+	href={canonicalURL}
+/>
 
-<meta property="og:title" content={SITE_ERROR_INFO.title} />
-<meta property="og:url" content={canonicalURL} />
-<meta property="og:description" content={SITE_ERROR_INFO.description} />
-<meta content={SITE_ERROR_INFO.title} property="og:site_name" />
-<meta content="es" property="og:locale" />
-<meta property="og:image" content={ogImg} />
-<meta property="og:image:alt" content={ogImgAlt} />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:locale" content="es" />
+<meta
+	property="og:title"
+	content={SITE_ERROR_INFO.title}
+/>
+<meta
+	property="og:url"
+	content={canonicalURL}
+/>
+<meta
+	property="og:description"
+	content={SITE_ERROR_INFO.description}
+/>
+<meta
+	content={SITE_ERROR_INFO.title}
+	property="og:site_name"
+/>
+<meta
+	content="es"
+	property="og:locale"
+/>
+<meta
+	property="og:image"
+	content={ogImg}
+/>
+<meta
+	property="og:image:alt"
+	content={ogImgAlt}
+/>
+<meta
+	property="og:image:width"
+	content="1200"
+/>
+<meta
+	property="og:image:height"
+	content="630"
+/>
+<meta
+	property="og:locale"
+	content="es"
+/>
 
-<meta property="og:type" content="website" />
+<meta
+	property="og:type"
+	content="website"
+/>
 
 {/* Twitter */}
-<meta name="twitter:title" content={SITE_ERROR_INFO.title} />
-<meta name="twitter:description" content={SITE_ERROR_INFO.description} />
-<meta name="twitter:image" content={ogImg} />
-<meta name="twitter:image:alt" content={ogImgAlt} />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@akac12z" />
-<meta name="twitter:creator" content="@akac12z" />
+<meta
+	name="twitter:title"
+	content={SITE_ERROR_INFO.title}
+/>
+<meta
+	name="twitter:description"
+	content={SITE_ERROR_INFO.description}
+/>
+<meta
+	name="twitter:image"
+	content={ogImg}
+/>
+<meta
+	name="twitter:image:alt"
+	content={ogImgAlt}
+/>
+<meta
+	name="twitter:card"
+	content="summary_large_image"
+/>
+<meta
+	name="twitter:site"
+	content="@cz__chan"
+/>
+<meta
+	name="twitter:creator"
+	content="@cz__chan"
+/>
